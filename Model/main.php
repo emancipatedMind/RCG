@@ -8,7 +8,7 @@
       <section class=color></section>
     </section>
     <section class='next arrow'></section>
-    <p class=info>Click new to fill with random color. Click load if you would like to load the colors from the database.</p>
+    <p class=info>Click new to fill with random color.</p>
   </section>
 </section>
 
@@ -16,8 +16,6 @@
   <section class=container>
     <section class=buttons>
       <span class='button new'>New</span>
-      <span class='button func'></span>
-      <span class='button load'>Load</span>
     </section>
     <section class=fields>
       <h3>Ranges</h3>

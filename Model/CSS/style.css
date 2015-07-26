@@ -8,8 +8,6 @@ body {
 }
 
 .page {
-    /*background-color : hsl(45, 64%, 70%);*/
-    /*background-color : hsl(14, 68%, 37%);*/
     background-color : hsl(195, 84%, 32%);
     padding : 10px;
 }

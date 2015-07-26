@@ -270,7 +270,7 @@
                         if(response.success) {
                             properties.id = response.id;
                             $('.check').css("visibility", "visible");
-                            $('.func').html("delete");
+                            //$('.func').html("delete");
                             newColor(properties, true);
                         }
 
@@ -346,7 +346,7 @@
                         if(response.success) {
                             properties.id = undefined;
                             $('.check').css("visibility", "hidden");
-                            $('.func').text("save");
+                            //$('.func').text("save");
                             newColor(properties, true);
                         };
 
@@ -377,7 +377,7 @@
             var settings, hsl = properties.hsl, defaults = {
                 jqColorObject : $('.color'),
                 jqInfoObject : $('.info'),
-                jqFuncObject : $('.func'),
+                //jqFuncObject : $('.func'),
                 jqCheckObject : $('.check'),
             };
 
@@ -414,28 +414,28 @@
             };
 
             /*Replaces CSS for functionality button.*/
-            settings.jqFuncObject.css(normalCSS);
+            //settings.jqFuncObject.css(normalCSS);
 
             /*Handles CSS for when the mouse hovers over button.*/
-            settings.jqFuncObject.hover(function() {
+            /*settings.jqFuncObject.hover(function() {
                 $(this).css(hoverCSS);
             }, function() {
                 $(this).css(normalCSS);
-            });
+            });*/
 
             /*If ID is undefined, then color has not been saved.
             **Make sure check mark is hidden, and functionality button
             **says save.*/
             if(properties.id===undefined) {
                 settings.jqCheckObject.css("visibility", "hidden");
-                settings.jqFuncObject.text("save");
+                //settings.jqFuncObject.text("save");
             }
 
             /*If not, color has been saved. Display checkmark, and
             **change functionality button to say delete.*/
             else {
                 settings.jqCheckObject.css("visibility", "visible");
-                settings.jqFuncObject.text("delete");
+                //settings.jqFuncObject.text("delete");
             };
 
         /*End of displayColor method.*/
@@ -559,13 +559,13 @@
 
     /*If functionality button is clicked, determine action to take depending on status of
     **current color. If currentColor has an ID, delete from database, and if it doesn't,
-    **save color to database.*/
+    **save color to database.
     $('.func').click(function() {
         if(currentColor.getId()===undefined) {
             currentColor.saveColor($('.info'));
         }
         else currentColor.deleteColor($('.info'));
-    });
+    });*/
 
     /*This function namespace will setup the css on the buttons with predefined colors or
     **random colors depending on what you pass to it. You must pass a jQuery object exclusively,
@@ -680,6 +680,7 @@
         if(currentColor.getIndex()===colors.length-1) $(this).css("visibility","hidden");
     });
 
+    /*//This button no longer exists.
     $('.load').click(function() {
         $('.arrow').css("visibility","hidden");
         colors.length = Color.prototype.index = 0;
@@ -704,12 +705,13 @@
     });
 
     buttonSetup({
-        jqObject : $('.new'),
+        jqObject : $('.load'),
         color : "hsl(195, 84%, 32%)"
     });
+    */
 
     buttonSetup({
-        jqObject : $('.load'),
+        jqObject : $('.new'),
         color : "hsl(195, 84%, 32%)"
     });
 
