@@ -12,6 +12,6 @@ echo "\n";
 
 render('Model/footer.php');
 
-echo "\n</section><!--End of Wrapper-->\n\n</section><!--End of Main-->";
+echo "\n</section><!--End of Wrapper-->\n\n</section><!--End of Main-->\n";
 
 ?>
